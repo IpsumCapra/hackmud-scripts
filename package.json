@@ -1,0 +1,30 @@
+{
+  "name": "hackmud-environment",
+  "license": "MIT",
+  "scripts": {
+    "push": "hsm push src/scripts --dts-path=player.d.ts --root-folder-path=src",
+    "dev": "hsm push src/scripts --dts-path=player.d.ts --root-folder-path=src --watch",
+    "sync-macros": "hsm sync-macros",
+    "emit-dts": "hsm emit-dts src/scripts",
+    "type-check": "tsc"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0",
+    "hackmud-script-manager": "^0.21.2",
+    "jiti": "^2.6.0",
+    "typescript": "5.7.3",
+    "typescript-eslint": "^8.44.1"
+  },
+  "npm": {
+    "patchedDependencies": {
+      "typescript": "patches/typescript.patch"
+    }
+  },
+  "prettier": {
+    "semi": false
+  }
+}
